@@ -53,9 +53,9 @@ https://www.youtube.com/watch?v=K87GRUXJLl0
 8. Open GeForce Now and set Steam overlay default key to F7. Click to "Web browser" button. It will show your google doc. After that click F7 again to hide Steam overlay. So you should leave browser window open
 9. Have fun price checking in GeForce NOW
 
--> If you have issues you can either delete config or change hotkey by clicking on the icon in tray
+If you have issues you can either delete config or change hotkey by clicking on the icon in tray
 
--> ![Screenshot 2023-11-10 234637](https://github.com/KloppstockBw/GFNPoEPriceCheck/assets/147773628/768c64b9-7170-4d4e-a0f7-3f18c1586b91)
+![Screenshot 2023-11-10 234637](https://github.com/KloppstockBw/GFNPoEPriceCheck/assets/147773628/768c64b9-7170-4d4e-a0f7-3f18c1586b91)
 
 # Troubleshooting
 ## When I press F6 in GFN nothing is happening
@@ -68,19 +68,38 @@ Check your hotkeys in Awakened Poe Trade. If you have changed it it has to be re
 2. Revert hotkeys to default or just reinstall Awakened Poe Trade.
 
 ## When I try to check prices I see the "Record clip" window instead
-If you have Zoom Workspace installed, it will conflict with script's shortcuts. Steps to fixing:
+If you have Zoom Workspace installed, it will conflict with script's shortcuts. What to do:
 1. Open Zoom Workspace 
 2. Go to Settings → Keyboard shortcuts
 3. Change "Record clip" global hotkey or just disable it.
 
-You also could close Zoom before playing.
+You also could close Zoom before playing - **I strongly recommend that!**
+
+## I entered the game and the hotkey F5 does not send me to hideout
+At the same time, "/" is printed in the chat. What to do:
+
+1. Try checking the price of any item
+2. If everything works, try f5 again, it should work
+3. If it doesn't work, try resetting the configuration
+
+## docs.google.com is either empty or not public
+<img width="409" height="276" alt="image" src="https://github.com/user-attachments/assets/96d088a8-03f3-4f66-ac64-ce37d9237738" />
+
+This problem is probably caused by the fact that the Google document does not open and/or the web browser in Steam is not selected as the default tab. What to do:
+
+1. Press F7, your web browser should open.
+2. If something other than a browser opens, on the bottom panel in Steam, click on the browser, a Google document should open
+<img width="837" height="150" alt="image" src="https://github.com/user-attachments/assets/0e78af9d-5da2-4520-9af1-e475a618b0e4" />
+
+3. Now press F7 again, the overlay will disappear
+4. Try checking the price, it should work
 
 ## When I try to check prices I only see Awakened Poe Trade main page and no price check
 It's probably because you didn't show the script exact location of "Ctrl + V price check" field. Steps to fixing:
 1. Right click on script in tray → Reset config
 2. On the last step point to the field.
 
-### to do 
+# To do 
 - troubleshooting
 - Gui to change config and stuff
   
