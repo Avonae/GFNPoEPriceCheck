@@ -24,7 +24,7 @@ Global $aKoordinaten = 0
 Global $counter = 0 
 Global $counterwindow = 300
 Global $sURL = 0
-Global $URLau3 = "https://github.com/KloppstockBw/GFNPoEPriceCheck/blob/main/GFNPoEPriceCheck.au3"
+Global $URLau3 = "https://github.com/Avonae/GFNPoEPriceCheck/blob/main/GFNPoEPriceCheck.au3"
 Global $VersionL = "20240802AA"
 Global $updateChecked = False
 Global $WEBSITE, $UPDATE
@@ -36,7 +36,7 @@ Global $HotKey4 = ""
 Global $HotKey5 = ""
 Global $HotKey6 = ""
 If Not FileExists($sDirPath) Then DirCreate($sDirPath)
-If Not FileExists($sDirPath & "\GFNPoEPriceCheck.ico") Then InetGet("https://raw.githubusercontent.com/KloppstockBw/GFNPoEPriceCheck/main/favicon.ico", $sDirPath & "\GFNPoEPriceCheck.ico", $INET_FORCERELOAD)
+If Not FileExists($sDirPath & "\GFNPoEPriceCheck.ico") Then InetGet("https://raw.githubusercontent.com/Avonae/GFNPoEPriceCheck/main/favicon.ico", $sDirPath & "\GFNPoEPriceCheck.ico", $INET_FORCERELOAD)
 
 $trayItem = TrayCreateItem("Change Hotkeys")
 TrayItemSetOnEvent($trayItem, "ChangeHotkeys")
@@ -47,7 +47,7 @@ TrayItemSetOnEvent($trayItem, "ExitScript")
 TraySetIcon($sDirPath & "\GFNPoEPriceCheck.ico")
 
 LoadHotkeysFromIni()
-Updater()
+;Updater()
 AutorunAwakened()
 awakenedrunning()
 configMaus()
@@ -311,7 +311,7 @@ Func Updater()
                 Case $GUI_EVENT_CLOSE
                     Exit
                 Case $WEBSITE
-                    ShellExecute("https://github.com/KloppstockBw/GFNPoEPriceCheck/")
+                    ShellExecute("https://github.com/Avonae/GFNPoEPriceCheck/")
                     Exit
                 Case $UPDATE
                     ExitLoop
