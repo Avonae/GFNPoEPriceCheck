@@ -98,6 +98,8 @@ It's probably because you didn't show the script exact location of "Ctrl + V pri
 1. Right click on script in tray → Reset config
 2. On the last step point to the field.
 
+Double check the "Zoom sharing service" in Task Manager. Zoom may be closed but the service may still work. So close it, should helps. 
+
 # To do 
 - troubleshooting
 - Gui to change config and stuff
