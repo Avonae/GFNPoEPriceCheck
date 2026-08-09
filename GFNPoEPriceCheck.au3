@@ -24,7 +24,7 @@ Global $aKoordinaten = 0
 Global $counter = 0 
 Global $counterwindow = 300
 Global $sURL = 0
-Global $URLau3 = "https://github.com/Avonae/GFNPoEPriceCheck/blob/main/GFNPoEPriceCheck.au3"
+Global $URLau3 = "https://github.com/KloppstockBw/GFNPoEPriceCheck/blob/main/GFNPoEPriceCheck.au3"
 Global $VersionL = "20240802AA"
 Global $updateChecked = False
 Global $WEBSITE, $UPDATE
@@ -36,7 +36,7 @@ Global $HotKey4 = ""
 Global $HotKey5 = ""
 Global $HotKey6 = ""
 If Not FileExists($sDirPath) Then DirCreate($sDirPath)
-If Not FileExists($sDirPath & "\GFNPoEPriceCheck.ico") Then InetGet("https://raw.githubusercontent.com/Avonae/GFNPoEPriceCheck/main/favicon.ico", $sDirPath & "\GFNPoEPriceCheck.ico", $INET_FORCERELOAD)
+If Not FileExists($sDirPath & "\GFNPoEPriceCheck.ico") Then InetGet("https://raw.githubusercontent.com/KloppstockBw/GFNPoEPriceCheck/main/favicon.ico", $sDirPath & "\GFNPoEPriceCheck.ico", $INET_FORCERELOAD)
 
 $trayItem = TrayCreateItem("Change Hotkeys")
 TrayItemSetOnEvent($trayItem, "ChangeHotkeys")
@@ -77,6 +77,8 @@ Func LoadHotkeysFromIni()
     HotKeySet($HotKey5, "ExitScript")
 	$HotKey6 = IniRead($sIniFile, "HotKey", "Key6", "{F4}")
     HotKeySet($HotKey6, "TradeInvite")
+	$HotKey7 = IniRead($sIniFile, "HotKey", "Key7", "{F8}")
+    HotKeySet($HotKey7, "gotoBoat")
 	Local $Check = IniRead($sIniFile, "HotKey", "Key1", "")
 If $Check = "" Then ChangeHotkeys()
 EndFunc
@@ -311,7 +313,7 @@ Func Updater()
                 Case $GUI_EVENT_CLOSE
                     Exit
                 Case $WEBSITE
-                    ShellExecute("https://github.com/Avonae/GFNPoEPriceCheck/")
+                    ShellExecute("https://github.com/KloppstockBw/GFNPoEPriceCheck/")
                     Exit
                 Case $UPDATE
                     ExitLoop
@@ -399,6 +401,19 @@ EndFunc
 		Sleep(5)
 		Send("{ENTER}")
 	EndFunc
+
+	Func gotoBoat()
+		Opt("SendKeyDelay", 0)
+		If Not WinActive("Path of Exile") Then Return
+		Send("{ENTER}")
+		Sleep(5)
+		Send("/boat")
+		Sleep(5)
+		Send("{ENTER}")
+	EndFunc
+
+
+
 
 	Func copyItem()
 		If Not WinActive("Path of Exile") Then Return
